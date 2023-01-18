@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>calculatrice</title>
+</head>
+
+<body>
+  <style>
+    #calc{
+
+      background-color: rgb(216, 178, 131);
+      padding: 25%;
+    }
+    .h1{font-size: 90px;}
+  </style>
+  <div id="calc">
+    <h1>-CALCULATOR-</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="calculator.html">Calculator</a></li>
+    </ul>
+    X<input type="text" name="" id="X" />
+    <br />
+    Y<input type="text" name="" id="Y" />
+    <button onclick="showSomme()">+</button>
+    <button onclick="showsoustraction()">-</button>
+    <button onclick="showproduit()">*</button>
+    <button onclick="showdivision()">/</button>
+
+    <h3></h3>
+    <script>
+      let x = document.querySelector("#X");
+      let y = document.querySelector("#Y");
+      function showSomme() {
+        document.querySelector("h3").innerHTML = somme(
+          Number(x.value),
+          Number(y.value)
+        );
+      }
+      function showsoustraction() {
+        document.querySelector("h3").innerHTML = soustraction(
+          Number(x.value),
+          Number(y.value)
+        );
+      }
+      function showproduit() {
+        document.querySelector("h3").innerHTML = produit(
+          Number(x.value),
+          Number(y.value)
+        );
+      }
+      function showdivision() {
+        if (Number(y.value)==0){
+            alert("try again !");
+        }
+        else {
+        document.querySelector("h3").innerHTML = division(
+          Number(x.value),
+          Number(y.value)
+        );
+        }
+      }
+      function somme(x, y) {
+        return + (x + y);
+      }
+      function soustraction(x, y) {
+        return + (x - y);
+      }
+      function produit(x, y) {
+        return + (x * y);
+      }
+      function division(x, y) {
+        return + (x / y);
+      }
+    </script>
+  </div>
+</body>
+
+</html>
