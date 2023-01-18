@@ -1,0 +1,48 @@
+body{
+    background-color: rgb(230, 219, 188);
+    text-align: center;
+}
+.page{
+    
+    margin-top: 150px;
+    margin-left: 350px;
+    padding-left: 25px;
+    padding-right: 50px;
+    height: 50%;
+    width: 50%;
+    margin-right: 200px;
+    padding-bottom: 150px;
+    border-style: double;
+    border-color: rgb(8, 8, 8);
+    background-color: aqua;
+}
+#container{
+    border-color: black;
+    background-color: aliceblue;
+
+}
+#title {
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+    color: rgb(5, 5, 61);
+}
+#butt {
+    color: rgb(207, 23, 23);
+}
+#in{
+    border-style: double;
+    padding: 10px;
+}
+#button{
+    border-style: double;
+    background-color: beige;
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+}
+ul{
+    list-style: none;
+    padding: 0px;
+    margin: 3px;
+}

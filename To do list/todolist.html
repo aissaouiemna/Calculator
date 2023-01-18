@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To do list</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="./todolist.css">
+
+    <div class="page">
+        <h1 id="title">To-Do list</h1>
+        <input placeholder="Add new task" id="in" type="text"  />
+        <button id="button">add to do</button>
+    
+        <ul>
+
+        </ul>
+    </div>
+    <script>
+        let button = document.querySelector("button");
+
+        let liste = document.querySelector("ul");
+
+        let input = document.querySelector("input");
+
+        let check = document.querySelector("#check");
+
+        let butt = document.querySelector("butt");
+
+        input.addEventListener("keyup", (e)=>{
+            if (e.keyCode===13) {
+                addTodo();
+            }
+        })
+
+        button.addEventListener("click", addTodo);
+        butt.addEventListener("click", todelete);
+        
+        function line() {
+            if (liste.innerHTML.getElementById("check".checked = "true")) {
+                liste.innerHTML.getElementById("text").style.textDecorationLine = "line-through";
+            }
+        }
+        function addTodo() {
+            if (input.value == "") {
+                alert("Please Try again !! ");
+            }
+            else {
+
+                liste.innerHTML += `<li> <input  id="check" type="checkbox"/> <span id="text"> ${input.value} </span> <button class="butt" > Delete</button> </li>`;
+                input.value = "";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
